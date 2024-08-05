@@ -1,0 +1,52 @@
+
+.text-animation{
+font-size: 34px;
+font-weight: 600;
+min-width: 280px;
+}
+.text-animation span{
+position: relative;
+}
+.text-animation span::before{
+content: "Software engineer";
+color: var(--main-color);
+animation: words 5s infinite;
+}
+.text-animation span::after{
+content: "";
+background-color: var(--bg-color);
+position: absolute;
+width: calc(100% + 80px);
+height: 100%;
+border-left: 33px solid var(--bg-color);
+right: -8px;
+animation: cursor 0.6s infinite, typing 20s steps(14) infinite;
+}
+@keyframes cursor{
+to{
+    border-left: 2px solid var(--main-color);
+}
+}
+@keyframes words{
+0%,
+20%{
+    
+}
+41%,
+60%{
+
+}
+61%,
+80%{
+    
+}
+81%,
+100%{
+    content: "Software engineer";
+}
+}
+.footer{
+    padding: 2rem 3%;
+}
+
+
